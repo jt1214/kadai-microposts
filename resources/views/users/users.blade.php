@@ -8,11 +8,10 @@
                         {{ $user->name }}
                     </div>
                     <div>
-                        <p>{!! link_to_route('users.show', 'View profile' ['id' => $users->id]) !!}</p>
+                        <p>{!! link_to_route('users.show', 'View profile', ['id' => $user->id]) !!}</p>
                     </div>
                 </div>
             </li>
         @endforeach
     </ul>
-    {{ $users->links('pagination::bootstrap-4') }}
 @endif
